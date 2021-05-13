@@ -1,5 +1,5 @@
 <template>
-
+<div class="user-chat-container"></div>
 </template>
 
 <script>

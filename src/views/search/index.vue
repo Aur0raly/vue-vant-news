@@ -1,5 +1,5 @@
 <template>
-
+<div class="search-container"></div>
 </template>
 
 <script>
