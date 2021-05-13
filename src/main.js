@@ -4,6 +4,15 @@ import router from './router'
 import store from './store'
 // 引入全局样式表
 import './styles/index.less'
+// 引入 Vant 组件
+import Vant from 'vant'
+// 引入 amfe-flexible
+import 'amfe-flexible'
+// Vant 组件库样式
+import 'vant/lib/index.css'
+
+// 全局注册 Vant
+Vue.use(Vant)
 
 Vue.config.productionTip = false
 
