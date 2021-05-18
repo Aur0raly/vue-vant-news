@@ -9,12 +9,12 @@ export default {
   name: 'App',
   data () {
     return {}
-  },
-  props: ['iconClass', 'iconDianzan']
-  // 传入的iconClass写法  iconClass: { width: "20px", height: "20px", }
+  }
 }
 </script>
 
 <style lang="less">
-
+body {
+  background-color: #eee;
+}
 </style>
