@@ -92,6 +92,7 @@ export default {
   methods: {
     // 登录请求
     async onLogin () {
+      // 加载中提示
       Toast.loading({
         message: '加载中...',
         forbidClick: true, // 禁止背景点击
@@ -99,12 +100,12 @@ export default {
       })
       try {
         const { data } = await login(this.user)
-        console.log(data)
         Toast.success({
           message: '登录成功',
           forbidClick: true
         })
         this.$store.commit('setUser', data.data)
+        this.$router.back()
       } catch (err) {
         console.log(err)
         Toast.fail({
@@ -150,6 +151,7 @@ export default {
       }
       this.isSendCodeLoading = false
     },
+    // 倒计时结束显示按钮
     countDownOver () {
       this.isCountDownShow = false
     }
@@ -164,7 +166,6 @@ img {
   margin-top: 50px;
   margin-bottom: 30px;
 }
-
 .login {
   width: 300px;
   margin: 30px auto;

@@ -10,7 +10,7 @@ export const getItem = name => {
 // 添加
 export const setItem = (name, value) => {
   if (typeof value === 'object') {
-    value = JSON.parse(value)
+    value = JSON.stringify(value)
   }
   window.localStorage.setItem(name, value)
 }
